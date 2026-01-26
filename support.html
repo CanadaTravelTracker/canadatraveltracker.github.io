@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Canada Travel Tracker</title>
+    <meta name="description"
+        content="Support and FAQs for Canada Travel Tracker. Get help with tracking your physical presence, citizenship eligibility, and PR obligations.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Satoshi', 'sans-serif'],
+                        mono: ['SF Mono', 'Menlo', 'monospace'],
+                    },
+                    colors: {
+                        canvas: '#FDFCFB',
+                        charcoal: '#1A1A1A',
+                        muted: '#636E72',
+                        maple: '#D52B1E',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-canvas text-charcoal antialiased">
+
+    <nav class="w-full border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 hover:opacity-70 transition-opacity">
+                <div class="w-6 h-6 rounded bg-maple flex items-center justify-center text-white text-[10px]">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <span class="font-bold text-lg tracking-tight">Canada Travel Tracker</span>
+            </a>
+            <a href="index.html" class="text-sm font-bold text-muted hover:text-charcoal transition-colors">Back to
+                Home</a>
+        </div>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-6 py-20">
+        <h1 class="text-4xl font-black mb-10">Care & Support</h1>
+
+        <div class="space-y-12">
+            <!-- Contact Box -->
+            <section class="bg-white p-8 md:p-12 rounded-[2.5rem] border border-gray-100 shadow-sm text-center">
+                <div class="w-16 h-16 bg-maple/10 rounded-2xl flex items-center justify-center text-maple mx-auto mb-6">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-4">Direct Assistance</h2>
+                <p class="text-muted mb-8 leading-relaxed max-w-md mx-auto">Have a specific question or found a bug?
+                    We're here to help you stay on track for your citizenship.</p>
+                <a href="mailto:support@techwithkev.com" id="support-email-link"
+                    class="text-2xl font-black text-maple hover:opacity-80 transition-opacity">
+                    support@techwithkev.com
+                </a>
+            </section>
+
+            <!-- FAQs -->
+            <section>
+                <h2 class="text-xl font-black mb-8 border-b border-gray-100 pb-4 uppercase tracking-widest text-muted">
+                    Frequently Asked Questions</h2>
+
+                <div class="space-y-8">
+                    <div class="group">
+                        <h3 class="text-lg font-bold mb-2 group-hover:text-maple transition-colors">Is my data shared
+                            with IRCC?</h3>
+                        <p class="text-muted leading-relaxed">No. Canada Travel Tracker is a private tool designed for
+                            your own organization. We do not transmit any of your travel data to government agencies or
+                            any third parties.</p>
+                    </div>
+
+                    <div class="group">
+                        <h3 class="text-lg font-bold mb-2 group-hover:text-maple transition-colors">How are partial days
+                            calculated?</h3>
+                        <p class="text-muted leading-relaxed">The app automatically follows IRCC guidelines. Any part of
+                            a day spent in Canada counts as a full day. If you were in Canada for only an hour before
+                            leaving, it still counts as a day present.</p>
+                    </div>
+
+                    <div class="group">
+                        <h3 class="text-lg font-bold mb-2 group-hover:text-maple transition-colors">What are TR credits?
+                        </h3>
+                        <p class="text-muted leading-relaxed">If you were in Canada as a temporary resident or protected
+                            person before becoming a permanent resident, you may get credit for half a day for each day
+                            you spent in Canada, up to a maximum of 365 days.</p>
+                    </div>
+
+                    <div class="group">
+                        <h3 class="text-lg font-bold mb-2 group-hover:text-maple transition-colors">How do I back up my
+                            data?</h3>
+                        <p class="text-muted leading-relaxed">Since the app is local-first, your data stays on your
+                            device. We highly recommend using the <strong>"Export Trips to CSV"</strong> feature in
+                            Settings to keep a backup in your personal storage or email.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="py-12 border-t border-gray-100 text-center bg-white mt-10">
+        <p class="text-xs text-gray-400">© 2026 TechWithKev. Built for Future Canadians.</p>
+    </footer>
+
+</body>
+
+</html>

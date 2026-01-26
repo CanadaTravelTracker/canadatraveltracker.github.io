@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Canada Travel Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #A12217 0%, #D52B1E 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Satoshi', 'sans-serif'],
+                        mono: ['SF Mono', 'Menlo', 'monospace'],
+                    },
+                    colors: {
+                        canvas: '#FDFCFB',
+                        charcoal: '#1A1A1A',
+                        muted: '#636E72',
+                        maple: '#D52B1E',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-canvas text-charcoal antialiased">
+
+    <nav class="w-full border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 hover:opacity-70 transition-opacity">
+                <div class="w-6 h-6 rounded bg-maple flex items-center justify-center text-white text-[10px]">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <span class="font-bold text-lg tracking-tight">Canada Travel Tracker</span>
+            </a>
+            <a href="index.html" class="text-sm font-bold text-muted hover:text-charcoal transition-colors">Back to
+                Home</a>
+        </div>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-6 py-20">
+        <h1 class="text-4xl font-black mb-2">Privacy Policy</h1>
+        <p class="text-muted mb-12 font-mono text-sm">Last Updated: January 25, 2026</p>
+
+        <div class="prose prose-lg prose-slate max-w-none">
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center text-green-600">
+                        <i class="fas fa-shield-alt text-sm"></i>
+                    </div>
+                    The Short Version
+                </h2>
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
+                    <p class="font-bold text-charcoal mb-3 text-lg">Your travel log is private.</p>
+                    <p class="text-muted text-base leading-relaxed">Canada Travel Tracker is a "Local-First"
+                        application. Every trip you log, every work hour you track, and every date you enter is stored
+                        exclusively on your device. We have no servers, no mandatory cloud sync, and no access to your
+                        data.</p>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h3 class="text-xl font-bold mb-4">1. Data Storage</h3>
+                <p class="text-muted leading-relaxed mb-4">All data is stored locally in the application's sandbox using
+                    Apple's native Core Data / SwiftData framework.</p>
+                <div class="grid gap-4">
+                    <div class="p-5 bg-white rounded-2xl border border-gray-100">
+                        <p class="font-bold text-sm mb-1">Travel History</p>
+                        <p class="text-xs text-muted">Stored in an encrypted local database on your iPhone.</p>
+                    </div>
+                    <div class="p-5 bg-white rounded-2xl border border-gray-100">
+                        <p class="font-bold text-sm mb-1">Location (Geofencing)</p>
+                        <p class="text-xs text-muted">Auto-tracking happens entirely on-device. We never see your
+                            coordinates or history.</p>
+                    </div>
+                    <div class="p-5 bg-white rounded-2xl border border-gray-100">
+                        <p class="font-bold text-sm mb-1">Personal Profiles</p>
+                        <p class="text-xs text-muted">Names and immigration dates stay in your local app container.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h3 class="text-xl font-bold mb-4">2. Zero Transmission</h3>
+                <p class="text-muted leading-relaxed">
+                    Canada Travel Tracker does <strong>not</strong> transmit your immigration data to any external
+                    server. We do not sell, trade, or share your data with IRCC or any third party.
+                </p>
+                <p class="text-muted leading-relaxed mt-4">
+                    Data only leaves your device when you initiate an export (e.g., Export to CSV) for your own records.
+                </p>
+            </section>
+
+            <section class="mb-12">
+                <h3 class="text-xl font-bold mb-4">3. Third Party Services</h3>
+                <p class="text-muted leading-relaxed">
+                    We use standard platform services for App Store analytics and In-App Purchases (Pro features). These
+                    are governed by Apple's Privacy Policy. We do not use third-party behavioral tracking like Google
+                    Analytics.
+                </p>
+            </section>
+
+            <section class="mb-12">
+                <h3 class="text-xl font-bold mb-4">4. Contact</h3>
+                <p class="text-muted leading-relaxed">
+                    If you have questions about this policy, please visit our support page or contact us at <a
+                        href="mailto:support@techwithkev.com" id="privacy-email-link"
+                        class="text-maple font-bold">support@techwithkev.com</a>.
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="py-12 border-t border-gray-100 text-center bg-white mt-10">
+        <p class="text-xs text-gray-400">© 2026 TechWithKev. Built with Privacy First.</p>
+    </footer>
+
+</body>
+
+</html>
