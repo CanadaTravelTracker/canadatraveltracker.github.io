@@ -56,16 +56,128 @@
         <h1 class="text-4xl font-black mb-10">Care & Support</h1>
 
         <div class="space-y-12">
+            <!-- Contact Form -->
+            <section class="bg-white p-8 md:p-12 rounded-[2.5rem] border border-gray-100 shadow-sm">
+                <h2 class="text-2xl font-bold mb-8 text-center">Send us a Message</h2>
+                <form id="contact-form" action="https://formspree.io/f/mzdrgnzn" method="POST"
+                    enctype="multipart/form-data" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label for="full-name" class="text-sm font-bold text-charcoal ml-1">Full Name</label>
+                            <input type="text" name="name" id="full-name" required
+                                class="w-full px-5 py-4 rounded-2xl bg-canvas border border-gray-100 focus:border-maple focus:ring-1 focus:ring-maple outline-none transition-all text-sm"
+                                placeholder="Alexander Mackenzie">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="email" class="text-sm font-bold text-charcoal ml-1">Email Address</label>
+                            <input type="email" name="email" id="email" required
+                                class="w-full px-5 py-4 rounded-2xl bg-canvas border border-gray-100 focus:border-maple focus:ring-1 focus:ring-maple outline-none transition-all text-sm"
+                                placeholder="alex@example.com">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label for="subject" class="text-sm font-bold text-charcoal ml-1">Topic</label>
+                        <select name="subject" id="subject" required
+                            class="w-full px-5 py-4 rounded-2xl bg-canvas border border-gray-100 focus:border-maple focus:ring-1 focus:ring-maple outline-none transition-all text-sm appearance-none">
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Bug Report">Bug Report / Technical Issue</option>
+                            <option value="Billing">Billing / Pro Subscription</option>
+                            <option value="Feature Request">Feature Request</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <!-- Dynamic File Upload for Bug Reports -->
+                    <div id="file-upload-container"
+                        class="hidden space-y-2 animate-in fade-in slide-in-from-top-2 duration-300">
+                        <label for="upload" class="text-sm font-bold text-charcoal ml-1">Attachment
+                            (Screenshot/Log)</label>
+                        <input type="file" name="upload" id="upload"
+                            class="w-full px-5 py-3 rounded-2xl bg-canvas border border-gray-100 focus:border-maple focus:ring-1 focus:ring-maple outline-none transition-all text-xs file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-black file:bg-maple/10 file:text-maple hover:file:bg-maple/20 cursor-pointer">
+                    </div>
+                    <div class="space-y-2">
+                        <label for="message" class="text-sm font-bold text-charcoal ml-1">Message</label>
+                        <textarea name="message" id="message" rows="4" required
+                            class="w-full px-5 py-4 rounded-2xl bg-canvas border border-gray-100 focus:border-maple focus:ring-1 focus:ring-maple outline-none transition-all text-sm"
+                            placeholder="How can we help you stay on track?"></textarea>
+                    </div>
+                    <button type="submit" id="submit-button"
+                        class="w-full bg-charcoal text-white py-4 rounded-2xl font-bold hover:bg-black transition-all shadow-lg flex items-center justify-center gap-2">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane text-xs"></i>
+                    </button>
+                </form>
+                <div id="form-status" class="hidden mt-6 p-4 rounded-2xl text-center font-bold text-sm"></div>
+            </section>
+
+            <script>
+                const form = document.getElementById("contact-form");
+                const status = document.getElementById("form-status");
+                const button = document.getElementById("submit-button");
+                const subjectSelect = document.getElementById("subject");
+                const fileUploadContainer = document.getElementById("file-upload-container");
+
+                // Toggle file upload visibility based on subject
+                subjectSelect.addEventListener("change", function () {
+                    if (this.value === "Bug Report") {
+                        fileUploadContainer.classList.remove("hidden");
+                    } else {
+                        fileUploadContainer.classList.add("hidden");
+                        document.getElementById("upload").value = ""; // Clear file if switching away
+                    }
+                });
+
+                async function handleSubmit(event) {
+                    event.preventDefault();
+                    status.classList.remove("hidden", "bg-green-50", "text-green-700", "bg-red-50", "text-red-700");
+                    button.disabled = true;
+                    button.innerHTML = '<span>Sending...</span><i class="fas fa-circle-notch fa-spin text-xs"></i>';
+
+                    const data = new FormData(event.target);
+                    fetch(event.target.action, {
+                        method: form.method,
+                        body: data,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    }).then(response => {
+                        if (response.ok) {
+                            status.innerHTML = "Thanks! Your message has been sent. We'll get back to you soon.";
+                            status.classList.add("bg-green-50", "text-green-700", "block");
+                            form.reset();
+                            fileUploadContainer.classList.add("hidden"); // Reset visibility
+                            button.hidden = true;
+                        } else {
+                            response.json().then(data => {
+                                if (Object.hasOwn(data, 'errors')) {
+                                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                                } else {
+                                    status.innerHTML = "Oops! There was a problem submitting your form";
+                                }
+                                status.classList.add("bg-red-50", "text-red-700", "block");
+                                button.disabled = false;
+                                button.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane text-xs"></i>';
+                            })
+                        }
+                    }).catch(error => {
+                        status.innerHTML = "Oops! There was a problem submitting your form";
+                        status.classList.add("bg-red-50", "text-red-700", "block");
+                        button.disabled = false;
+                        button.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane text-xs"></i>';
+                    });
+                }
+                form.addEventListener("submit", handleSubmit)
+            </script>
+
             <!-- Contact Box -->
-            <section class="bg-white p-8 md:p-12 rounded-[2.5rem] border border-gray-100 shadow-sm text-center">
+            <section class="bg-gray-50/50 p-8 md:p-12 rounded-[2.5rem] border border-gray-100 text-center">
                 <div class="w-16 h-16 bg-maple/10 rounded-2xl flex items-center justify-center text-maple mx-auto mb-6">
                     <i class="fas fa-envelope text-2xl"></i>
                 </div>
-                <h2 class="text-2xl font-bold mb-4">Direct Assistance</h2>
-                <p class="text-muted mb-8 leading-relaxed max-w-md mx-auto">Have a specific question or found a bug?
-                    We're here to help you stay on track for your citizenship.</p>
+                <h2 class="text-xl font-bold mb-4">Direct Email</h2>
+                <p class="text-muted mb-8 leading-relaxed max-w-md mx-auto text-sm">Prefer your own mail client? Send us
+                    a direct message anytime.</p>
                 <a href="mailto:canadatraveltracker@gmail.com" id="support-email-link"
-                    class="text-2xl font-black text-maple hover:opacity-80 transition-opacity">
+                    class="text-xl font-black text-maple hover:opacity-80 transition-opacity">
                     canadatraveltracker@gmail.com
                 </a>
             </section>
