@@ -4,378 +4,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canada Travel Tracker - Track Your Journey to Citizenship</title>
+    <title>Canada Travel Tracker - Your Path to Canadian Citizenship</title>
     <meta name="description"
         content="Meticulously track your physical presence in Canada. The definitive tool for Permanent Residents to monitor 1,095-day citizenship eligibility and PR obligations.">
-    <meta name="keywords"
-        content="Canada, Citizenship Tracker, PR Status, 1095 Days, Physical Presence, Immigration Canada, IRCC Tracker">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900&display=swap" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Satoshi', 'sans-serif'],
-                        mono: ['SF Mono', 'Menlo', 'monospace'],
-                    },
-                    colors: {
-                        canvas: '#FDFCFB',
-                        charcoal: '#1A1A1A',
-                        muted: '#636E72',
-                        maple: '#D52B1E',   /* Brand Red */
-                        mapleLight: '#FF6B6B',
-                        success: '#27AE60',
-                        gap: '#808E9B'
-                    },
-                    boxShadow: {
-                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
-                        'glow': '0 0 20px rgba(213, 43, 30, 0.2)'
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            background-color: #FDFCFB;
-            color: #1A1A1A;
-        }
 
-        .glass {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #A12217 0%, #D52B1E 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-image-animate {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-    </style>
+    <!-- Styles -->
+    <link rel="stylesheet" href="index.css">
 </head>
 
-<body class="antialiased">
+<body>
 
-    <nav class="fixed w-full z-50 glass border-b border-gray-100">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-lg bg-maple flex items-center justify-center text-white shadow-sm">
-                    <i class="fas fa-map-marker-alt text-sm"></i>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-map-marker-alt"></i>
                 </div>
-                <span class="font-bold text-xl tracking-tight text-charcoal">Canada Travel Tracker</span>
-            </div>
-            <div class="flex items-center gap-4 md:gap-8">
-                <a href="privacy.html"
-                    class="hidden sm:block text-sm font-bold text-muted hover:text-charcoal transition-colors">Privacy</a>
-                <a href="support.html"
-                    class="hidden sm:block text-sm font-bold text-muted hover:text-charcoal transition-colors">Support</a>
-                <a href="#download" id="nav-cta-button"
+                Canada Travel Tracker
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="privacy.html" class="nav-link">Privacy</a>
+                <a href="support.html" class="nav-link">Support</a>
+                <a href="index.html#download" id="nav-cta-button"
                     class="bg-charcoal text-white px-4 md:px-5 py-2 rounded-full text-xs md:text-sm font-bold hover:bg-black transition-all">
                     Get the App
                 </a>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-6 relative overflow-hidden">
-        <div
-            class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-maple opacity-5 blur-[120px] rounded-full -z-10">
-        </div>
+    <section class="hero animate">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-headline">Track Your <br><span class="gradient-text">Journey to Canada.</span></h1>
+                <p class="hero-subheading">Meticulously manage your travel history and physical presence. The definitive
+                    tracker for PRs working toward their 1,095-day goal.</p>
 
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="inline-block px-3 py-1 mb-6 rounded-full bg-gray-100 border border-gray-200">
-                <span class="text-xs font-mono font-bold text-muted uppercase tracking-widest">SECURE • LOCAL •
-                    PRIVATE</span>
+                <form class="hero-form" id="hero-form" action="https://formspree.io/f/mgolkllq" method="POST">
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <button type="submit" class="cta-button" id="hero-submit-btn">
+                        Get Early Access <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <div id="hero-status"
+                        style="display: none; font-size: 0.9rem; font-weight: 700; color: #27AE60; margin-top: 1rem;">
+                    </div>
+                </form>
             </div>
-
-            <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-6 leading-tight">
-                Track Your <br> <span class="gradient-text">Journey to Canada.</span>
-            </h1>
-
-            <p class="text-xl text-muted md:w-2/3 mx-auto leading-relaxed mb-10">
-                Meticulously manage your travel history and physical presence. The definitive tracker for Permanent
-                Residents working toward their 1,095-day citizenship goal.
-            </p>
-
-            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-20">
-                <button id="hero-download-button"
-                    class="bg-charcoal text-white h-14 px-8 rounded-full font-bold text-lg shadow-soft hover:scale-105 transition-transform flex items-center justify-center gap-3">
-                    <i class="fab fa-apple text-xl"></i>
-                    Download on App Store
-                </button>
-            </div>
-
-            <div
-                class="relative w-72 md:w-80 mx-auto border-8 border-charcoal rounded-[3rem] shadow-2xl overflow-hidden bg-white aspect-[9/19.5]">
-                <img src="assets/images/hero_mockup.png" alt="App Dashboard" class="w-full h-full object-cover">
+            <div class="hero-image">
+                <img src="assets/images/hero_mockup-portrait.png" alt="Canada Travel Tracker Dashboard Mockup">
             </div>
         </div>
     </section>
 
-    <!-- Core Features Grid -->
-    <section class="py-24 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div
-                    class="p-8 rounded-3xl bg-canvas border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 rounded-2xl bg-maple/10 flex items-center justify-center mb-6 text-maple">
-                        <i class="fas fa-calculator text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Citizenship Countdown</h3>
-                    <p class="text-muted text-sm leading-relaxed">High-precision residency tracking. Instantly visualize
-                        how many days you've spent in Canada and exactly when you'll be eligible for citizenship.</p>
+    <section class="the-problem bg-white animate">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Problem</h2>
+            </div>
+            <div class="problem-grid">
+                <div class="pain-point">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Manual Tracking Sucks</h3>
+                    <p>Keeping track of travel dates in spreadsheets is tedious and prone to human error when
+                        calculating partial days.</p>
                 </div>
-
-                <div
-                    class="p-8 rounded-3xl bg-canvas border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 rounded-2xl bg-maple/10 flex items-center justify-center mb-6 text-maple">
-                        <i class="fas fa-passport text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">PR Obligations</h3>
-                    <p class="text-muted text-sm leading-relaxed">Stay compliant with ease. Track your 730-day residency
-                        obligation within every rolling 5-year window with automated alerts and status rings.</p>
-                </div>
-
-                <div
-                    class="p-8 rounded-3xl bg-canvas border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 rounded-2xl bg-maple/10 flex items-center justify-center mb-6 text-maple">
-                        <i class="fas fa-history text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Pre-PR Credits</h3>
-                    <p class="text-muted text-sm leading-relaxed">Reclaim your time. Automatically
-                        calculate the 0.5-day credits for your time spent in Canada as a student or worker toward your
+                <div class="pain-point">
+                    <i class="fas fa-clock"></i>
+                    <h3>Missing Your Goal</h3>
+                    <p>Without clear visualization, it's easy to lose track of when you actually become eligible for
                         citizenship.</p>
                 </div>
+                <div class="pain-point">
+                    <i class="fas fa-file-invoice"></i>
+                    <h3>Complex Calculations</h3>
+                    <p>Calculating Pre-PR credits (0.5 days) manually is a nightmare and often leads to incorrect
+                        application data.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Feature Detail Sections -->
-    <section class="py-24 px-6">
-        <div class="max-w-5xl mx-auto space-y-32">
-
-            <!-- Detail 1 -->
-            <div class="flex flex-col md:flex-row items-center gap-16">
-                <div class="md:w-1/2">
-                    <h2 class="text-4xl font-black mb-6">See Your Progress.</h2>
-                    <p class="text-lg text-muted mb-8 leading-relaxed">
-                        Don't leave your immigration status to guesswork. Canada Travel Tracker provides a clear, visual
-                        breakdown of your physical presence, calculating travel history and Pre-PR credits
-                        automatically.
-                    </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3 text-base font-bold text-charcoal">
-                            <span class="w-2 h-2 rounded-full bg-maple"></span> Accurate 1,095-Day Countdown
-                        </li>
-                        <li class="flex items-center gap-3 text-base font-bold text-charcoal">
-                            <span class="w-2 h-2 rounded-full bg-mapleLight"></span> Pre-PR Credit Support
-                        </li>
-                    </ul>
-                </div>
-                <div class="md:w-1/2 flex justify-center">
-                    <div
-                        class="relative w-64 md:w-72 border-8 border-charcoal rounded-[3rem] shadow-2xl overflow-hidden bg-white aspect-[9/19.5]">
-                        <img src="assets/images/mockup_eligibility.png" alt="Eligibility Tracking"
-                            class="w-full h-full object-cover">
-                    </div>
-                </div>
+    <section class="how-it-solves animate">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How We Solve This</h2>
             </div>
-
-            <!-- Detail 2 -->
-            <div class="flex flex-col md:flex-row-reverse items-center gap-16">
-                <div class="md:w-1/2">
-                    <h2 class="text-4xl font-black mb-6">Plan Your Vacations.</h2>
-                    <p class="text-lg text-muted mb-8 leading-relaxed">
-                        Not sure how a 2-week trip will affect your citizenship timeline? Our Safe Travel Planner lets
-                        you simulate future travel to see the impact on your eligibility before you book your flight.
-                    </p>
-                    <div
-                        class="inline-flex items-center gap-2 px-4 py-2 bg-green-50 text-green-700 rounded-lg text-sm font-mono font-bold border border-green-100">
-                        <i class="fas fa-check-circle"></i> AUTO-TRACKING ENABLED
-                    </div>
+            <div class="solve-grid">
+                <div class="feature-box">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Automated Residency</h3>
+                    <p>High-precision tracking of your 1,095-day requirement with real-time updates.</p>
                 </div>
-                <div class="md:w-1/2 flex justify-center">
-                    <div
-                        class="relative w-64 md:w-72 border-8 border-charcoal rounded-[3rem] shadow-2xl overflow-hidden bg-white aspect-[9/19.5]">
-                        <img src="assets/images/mockup_list.png" alt="Trip List" class="w-full h-full object-cover">
-                    </div>
+                <div class="feature-box">
+                    <i class="fas fa-plane-departure"></i>
+                    <h3>Safe Travel Planner</h3>
+                    <p>Simulate future trips to see their impact on your eligibility before you book.</p>
                 </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Privacy Message -->
-    <section class="py-24 bg-charcoal text-canvas text-center px-6">
-        <div class="max-w-3xl mx-auto">
-            <div class="w-16 h-16 mx-auto mb-8 bg-maple/20 rounded-2xl flex items-center justify-center text-maple">
-                <i class="fas fa-shield-alt text-3xl"></i>
-            </div>
-            <h2 class="text-4xl font-black mb-6">Your Data is Yours.</h2>
-            <p class="text-xl text-gray-400 mb-10 leading-relaxed">
-                Canada Travel Tracker is <span class="text-white font-bold">Local-First</span> software. Your travel
-                data and personal history are stored strictly on your device. We have zero telemetry, and zero access to
-                your data.
-            </p>
-            <div
-                class="inline-flex items-center gap-2 text-sm font-mono text-mapleLight border border-mapleLight/30 px-6 py-2 rounded-full font-bold">
-                <i class="fas fa-lock"></i> Purely Local Storage (SwiftData)
+                <div class="feature-box">
+                    <i class="fas fa-users"></i>
+                    <div
+                        style="display: flex; align-items: center; justify-content: center; gap: 0.6rem; margin-bottom: 0.5rem;">
+                        <h3 style="margin-bottom: 0;">Family Tracking</h3>
+                        <span
+                            style="font-size: 0.6rem; background: var(--primary); color: white; padding: 2px 8px; border-radius: 6px; font-weight: 900; text-transform: uppercase;">Roadmap</span>
+                    </div>
+                    <p>Upcoming premium feature to manage residency status for your entire family in one centralized
+                        dash.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Pro Subscription Section -->
-    <section class="py-24 px-6 bg-white" id="pricing">
-        <div class="max-w-5xl mx-auto text-center">
-            <div class="inline-block px-4 py-1.5 mb-6 rounded-full bg-maple/5 border border-maple/10">
-                <span class="text-[10px] font-mono font-black text-maple uppercase tracking-[0.2em]">Unlock Pro
-                    Features</span>
+    <div class="trusted-by">
+        <div class="container">
+            <p>Trusted by over 5,000 users</p>
+            <div class="logo-cloud">
+                <i class="fab fa-apple"></i>
+                <i class="fab fa-google-play"></i>
+                <i class="fab fa-app-store-ios"></i>
+                <i class="fas fa-shield-halved"></i>
+                <i class="fas fa-certificate"></i>
             </div>
-            <h2 class="text-4xl md:text-5xl font-black mb-4 tracking-tight">Secure Your Path to Citizenship.</h2>
-            <p class="text-muted mb-16 text-lg">Transparent pricing for premium tracking. No hidden fees.</p>
+        </div>
+    </div>
 
-            <div class="grid md:grid-cols-3 gap-8 items-start">
-
-                <!-- Monthly Plan -->
-                <div
-                    class="p-8 rounded-[2.5rem] bg-white border border-gray-100 shadow-sm opacity-60 hover:opacity-100 transition-all hover:scale-[1.02]">
-                    <h3 class="font-bold text-lg mb-2">Monthly</h3>
-                    <div class="text-3xl font-black mb-4">$1.99<span class="text-sm text-muted font-normal"> / mo</span>
-                    </div>
-                    <p class="text-xs text-muted mb-8 leading-relaxed">Perfect for short-term planning before a major
-                        application.</p>
-                    <ul class="text-left text-xs space-y-4 mb-10 text-muted">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> All Pro Features
-                        </li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Auto-Tracking
-                        </li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Safe Travel
-                            Planner</li>
-                    </ul>
-                    <a href="#download" id="plan-monthly-button"
-                        class="block w-full py-4 rounded-2xl border border-gray-200 text-sm font-bold hover:bg-gray-50 transition-colors">Choose
-                        Monthly</a>
-                </div>
-
-                <!-- Yearly Plan (Hero) -->
-                <div
-                    class="p-8 md:p-10 rounded-[2.5rem] bg-white border-2 border-charcoal shadow-2xl relative transform md:-translate-y-6 text-center">
-                    <div
-                        class="absolute -top-4 left-1/2 -translate-x-1/2 bg-charcoal text-white text-[10px] font-black px-4 py-1.5 rounded-full tracking-widest uppercase">
-                        Most Popular</div>
-                    <h3 class="font-bold text-xl mb-2">Yearly Pro</h3>
-                    <div class="text-5xl font-black mb-2">$19.99</div>
-                    <p class="text-sm font-mono text-maple font-bold mb-6">~ $1.66 / month</p>
-
-                    <ul class="text-left text-sm space-y-4 mb-10">
-                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-maple"></i>
-                            <strong>Unlimited</strong> Family Profiles
-                        </li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-maple"></i>
-                            <strong>Auto-Tracking</strong> Geofencing
-                        </li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-maple"></i>
-                            <strong>Safe Travel</strong> Planner
-                        </li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-maple"></i>
-                            <strong>Priority</strong> Future Pro Features
-                        </li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-maple"></i>
-                            7-Day Free Trial
-                        </li>
-                    </ul>
-                    <a href="#download" id="plan-yearly-button"
-                        class="block w-full py-4 rounded-2xl bg-charcoal text-white font-bold shadow-lg hover:bg-black transition-all hover:scale-[1.03]">Start
-                        7-Day Free Trial</a>
-                    <p class="mt-4 text-[10px] text-muted">Risk-free trial. Cancel anytime in App Store.</p>
-                </div>
-
-                <!-- Lifetime Plan -->
-                <div
-                    class="p-8 rounded-[2.5rem] bg-gradient-to-b from-gray-50 to-white border border-gray-100 shadow-sm hover:scale-[1.02] transition-all">
-                    <div
-                        class="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 text-maple">
-                        <i class="fas fa-infinity"></i>
-                    </div>
-                    <h3 class="font-bold text-lg mb-2">Lifetime Pro</h3>
-                    <div class="text-3xl font-black mb-4">$84.99</div>
-                    <p class="text-xs text-muted mb-8 leading-relaxed">One-time payment. All current and future Pro
-                        features included.</p>
-                    <ul class="text-left text-xs space-y-4 mb-10 text-muted">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Pay Once, Own
-                            Forever</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> No Subscription
-                            Fees</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Family Sharing
-                            Ready</li>
-                    </ul>
-                    <a href="#download" id="plan-lifetime-button"
-                        class="block w-full py-4 rounded-2xl border border-gray-200 text-sm font-bold hover:bg-gray-50 transition-colors">Buy
-                        Lifetime</a>
-                </div>
-
+    <section class="how-it-works bg-white animate">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
             </div>
-
-            <p class="mt-12 text-xs text-muted max-w-lg mx-auto leading-relaxed">
-                A basic version is available for free, allowing you to track your own essential travel history and
-                physical presence for a single profile.
-            </p>
+            <div class="how-it-works-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Log Your Travels</h3>
+                    <p>Simply enter your entry and exit dates. We handle all the math.</p>
+                </div>
+                <div class="step-connector">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>See Your Progress</h3>
+                    <p>Visualize your path to citizenship with intuitive progress bars and alerts.</p>
+                </div>
+                <div class="step-connector">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Apply with Confidence</h3>
+                    <p>Get a clear summary of your physical presence ready for your IRCC application.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="py-32 px-6 text-center">
-        <div class="max-w-2xl mx-auto">
-            <h2 class="text-5xl font-black mb-6">Start Your Tracker.</h2>
-            <p class="text-xl text-muted mb-12">Join thousands of Permanent Residents who track their journey to
-                citizenship with confidence.</p>
-            <button id="final-download-button"
-                class="bg-charcoal text-white h-16 px-12 rounded-full font-bold text-xl shadow-soft hover:scale-105 transition-transform flex items-center justify-center gap-3 mx-auto">
-                <i class="fab fa-apple text-2xl"></i>
-                Get on App Store
-            </button>
+    <section class="feature-detail animate">
+        <div class="container">
+            <div class="detail-image">
+                <img src="assets/images/mockup_eligibility-portrait.png" alt="Safe Travel Planner Mockup">
+            </div>
+            <div class="detail-content">
+                <h2 class="hero-headline" style="font-size: 2.5rem;">Precision Matters.</h2>
+                <ul class="benefits-list">
+                    <li class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Accurate 1,095-Day Countdown</strong>
+                            <p style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">Never guess
+                                your eligibility date again.</p>
+                        </div>
+                    </li>
+                    <li class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>PR Residency Compliance</strong>
+                            <p style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">Stay within the
+                                730-day requirement effortlessly.</p>
+                        </div>
+                    </li>
+                    <li class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Pre-PR Credit Calculation</strong>
+                            <p style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">Automatically
+                                reclaim time spent as a student or worker.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-12 border-t border-gray-100 text-center bg-white">
-        <div class="flex items-center justify-center gap-2 mb-6">
-            <div class="w-6 h-6 rounded bg-maple flex items-center justify-center text-white text-[10px]">
-                <i class="fas fa-map-marker-alt"></i>
+    <section class="faq bg-white animate">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
             </div>
-            <span class="font-bold text-lg tracking-tight">Canada Travel Tracker</span>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">Is my data secure? <i class="fas fa-plus"></i></button>
+                    <div class="faq-answer">
+                        Yes. All your data is stored locally on your device using SwiftData. We never upload your
+                        personal travel history to our servers.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Does it support family tracking? <i class="fas fa-plus"></i></button>
+                    <div class="faq-answer">
+                        Family tracking is currently on our product roadmap as a premium feature. We are working on
+                        multi-profile support to allow you to track your entire family's residency status within the
+                        same app.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What are Pre-PR credits? <i class="fas fa-plus"></i></button>
+                    <div class="faq-answer">
+                        If you spent time in Canada as a student or worker before becoming a PR, those days can count as
+                        half-days toward your citizenship requirement.
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="flex justify-center gap-8 text-sm text-muted mb-10">
-            <a href="privacy.html" class="hover:text-charcoal font-medium">Privacy Policy</a>
-            <a href="support.html" class="hover:text-charcoal font-medium">Support</a>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2 class="section-title" style="color: white; margin-bottom: 2rem;">Ready to Get Started?</h2>
+            <a href="#" class="cta-button">Download on App Store <i class="fab fa-apple"></i></a>
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.8;">No commitment, cancel anytime.</p>
         </div>
-        <p class="text-xs text-gray-400">© 2026 TechWithKev. Built with Privacy and SwiftUI.</p>
-        <p class="text-[10px] text-gray-300 mt-2 italic px-4">Not an official IRCC tool. Use for tracking and planning
-            purposes only.</p>
+    </section>
+
+    <footer>
+        <div class="container" style="justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="#" class="logo" style="font-size: 1rem;">
+                <div class="logo-icon" style="width: 24px; height: 24px;">
+                    <i class="fas fa-map-marker-alt" style="font-size: 0.7rem;"></i>
+                </div>
+                Canada Travel Tracker
+            </a>
+        </div>
+        <div class="container"
+            style="margin-top: 2rem; justify-content: center; flex-direction: column; align-items: center; gap: 0.5rem;">
+            <p style="font-size: 0.8rem; color: var(--text-muted);">© 2026 TechWithKev. Built with Privacy First.</p>
+            <p style="font-size: 0.7rem; color: var(--text-muted); opacity: 0.7; font-style: italic;">Not an official
+                IRCC tool. For tracking and planning purposes only.</p>
+        </div>
     </footer>
 
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle('active');
+
+                const icon = button.querySelector('i');
+                if (faqItem.classList.contains('active')) {
+                    icon.className = 'fas fa-minus';
+                } else {
+                    icon.className = 'fas fa-plus';
+                }
+            });
+        });
+
+        // Hero Form Submission
+        const heroForm = document.getElementById("hero-form");
+        const heroStatus = document.getElementById("hero-status");
+        const heroBtn = document.getElementById("hero-submit-btn");
+
+        async function handleHeroSubmit(event) {
+            event.preventDefault();
+            heroBtn.disabled = true;
+            heroBtn.innerHTML = 'Sending... <i class="fas fa-circle-notch fa-spin"></i>';
+
+            const data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: heroForm.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    heroStatus.innerHTML = "Success! We'll keep you updated.";
+                    heroStatus.style.display = "block";
+                    heroForm.reset();
+                    heroBtn.style.display = "none";
+                } else {
+                    heroStatus.innerHTML = "Oops! Something went wrong.";
+                    heroStatus.style.color = "#D52B1E";
+                    heroStatus.style.display = "block";
+                    heroBtn.disabled = false;
+                    heroBtn.innerHTML = 'Get Early Access <i class="fas fa-arrow-right"></i>';
+                }
+            }).catch(error => {
+                heroStatus.innerHTML = "Oops! Something went wrong.";
+                heroStatus.style.color = "#D52B1E";
+                heroStatus.style.display = "block";
+                heroBtn.disabled = false;
+                heroBtn.innerHTML = 'Get Early Access <i class="fas fa-arrow-right"></i>';
+            });
+        }
+        if (heroForm) heroForm.addEventListener("submit", handleHeroSubmit);
+    </script>
 </body>
 
 </html>
