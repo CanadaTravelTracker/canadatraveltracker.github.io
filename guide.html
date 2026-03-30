@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Guide - Canada Travel Tracker</title>
+    <meta name="description"
+        content="Complete user manual for Canada Travel Tracker. Learn how to track your residency obligation, manage trips, and plan your path to Canadian citizenship.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .guide-nav {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border);
+            margin-bottom: 2rem;
+        }
+
+        .guide-nav h4 {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+        }
+
+        .guide-nav ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .guide-nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .guide-nav a:hover {
+            color: var(--primary);
+        }
+
+        .step-list {
+            list-style: none;
+            padding-left: 0;
+            counter-reset: step-counter;
+        }
+
+        .step-list li {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        .step-list li::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        .highlight-box {
+            background: #FFF9F9;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            border-radius: 0 1rem 1rem 0;
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                Canada Travel Tracker
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="guide.html" class="nav-link">Guide</a>
+                <a href="privacy.html" class="nav-link">Privacy</a>
+                <a href="support.html" class="nav-link">Support</a>
+                <a href="index.html#download" id="nav-cta-button"
+                    class="bg-charcoal text-white px-4 md:px-5 py-2 rounded-full text-xs md:text-sm font-bold hover:bg-black transition-all">
+                    Get the App
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div style="height: 80px;"></div>
+
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <h1 class="content-title">User Manual</h1>
+                <p class="content-subtitle">Master your journey to Canadian Citizenship</p>
+
+                <div class="content-area">
+                    <div class="guide-nav">
+                        <h4>Table of Contents</h4>
+                        <ul>
+                            <li><a href="#setup"><i class="fas fa-rocket"></i> Initial Setup</a></li>
+                            <li><a href="#walkthrough"><i class="fas fa-book-open"></i> Walkthrough Tutorial</a></li>
+                            <li><a href="#dashboard"><i class="fas fa-desktop"></i> Dashboard</a></li>
+                            <li><a href="#trips"><i class="fas fa-plane"></i> Managing Trips</a></li>
+                            <li><a href="#eligibility"><i class="fas fa-check-circle"></i> Citizenship Record</a></li>
+                            <li><a href="#planner"><i class="fas fa-calendar-check"></i> Safe Travel Planner (Pro)</a></li>
+                            <li><a href="#autotrack"><i class="fas fa-location-crosshairs"></i> Auto-Tracking (Pro)</a></li>
+                            <li><a href="#family"><i class="fas fa-users"></i> Family Profiles (Pro)</a></li>
+                            <li><a href="#notifications"><i class="fas fa-bell"></i> Notifications</a></li>
+                            <li><a href="#data"><i class="fas fa-file-export"></i> Data Export</a></li>
+                            <li><a href="#settings"><i class="fas fa-gear"></i> Settings</a></li>
+                            <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <p>Welcome to <strong>Canada Travel Tracker</strong>. This manual provides detailed, step-by-step
+                        instructions to help you navigate the app and accurately track your path to Canadian
+                        Citizenship and Permanent Residency.</p>
+
+                    <section id="setup" class="content-card">
+                        <h2><i class="fas fa-rocket" style="color: #3498DB;"></i> 1. Initial Setup &amp; Onboarding</h2>
+                        <p>When you first open the app, a <strong>6-step setup wizard</strong> walks you through creating your profile. Complete all steps to enable accurate calculations.</p>
+                        <ol class="step-list">
+                            <li><strong>Welcome:</strong> Tap <strong>"Get Started"</strong> to begin.</li>
+                            <li><strong>Profile Name:</strong> Enter your name or a nickname for the primary profile.</li>
+                            <li><strong>Critical Dates:</strong>
+                                <ul style="margin-top: 0.75rem; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <li><strong>PR Landing Date</strong> <em>(required)</em> — The exact date you became a Permanent Resident. Double-check it against your COPR (Confirmation of Permanent Residence).</li>
+                                    <li><strong>Pre-PR Arrival Date</strong> <em>(optional)</em> — If you lived in Canada as a student, worker, or visitor <em>before</em> your PR date, enter your first arrival date. Those days count as <strong>half-days</strong> toward your citizenship total (max 365 credited days).</li>
+                                    <li><strong>PR Card Expiry Date</strong> <em>(optional)</em> — Enables PR card expiry reminders.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Notifications:</strong> Review what the app can notify you about (PR card expiry, citizenship reminders, ongoing trip alerts), then tap <strong>"Allow Notifications"</strong>. You can adjust these later in Settings.</li>
+                            <li><strong>Auto-Tracking</strong> <em>(Pro feature)</em>: Learn how background border-crossing detection works. Pro subscribers can tap <strong>"Enable Auto-Tracking"</strong> to grant "Always On" location access. Location data never leaves your device. You can skip and enable this later in Settings.</li>
+                            <li><strong>All Set:</strong> Your profile is saved. Tap <strong>"Go to Dashboard"</strong> to begin.</li>
+                        </ol>
+                    </section>
+
+                    <section id="walkthrough" class="content-card">
+                        <h2><i class="fas fa-book-open" style="color: #8E44AD;"></i> 2. The Walkthrough Tutorial</h2>
+                        <p>After completing setup, a <strong>5-page tutorial</strong> appears automatically on your first launch. It takes about 30 seconds and explains what each screen shows.</p>
+                        <ul>
+                            <li><strong>Swipe left/right</strong> to move between pages, or tap <strong>Next / Back</strong> in the navigation bar.</li>
+                            <li>Tap <strong>Skip</strong> (top-left) to dismiss early.</li>
+                            <li>On the final page, tap <strong>"Add First Trip"</strong> to jump directly to adding your first travel entry.</li>
+                        </ul>
+                        <p style="margin-top: 1rem;"><strong>To replay the tutorial later:</strong> Go to <strong>Settings &rarr; Help &amp; Resources &rarr; Replay Tutorial</strong>.</p>
+                    </section>
+
+                    <section id="dashboard" class="content-card">
+                        <h2><i class="fas fa-desktop" style="color: #9B59B6;"></i> 3. Dashboard Overview</h2>
+                        <p>The Dashboard is your real-time command center. It updates every time you log or edit a trip.</p>
+                        <ul>
+                            <li><strong>Safe to Travel Hero Card:</strong> Shows one of three states — <em>Safe to Travel · N Days</em> (how many more days you can spend outside Canada), <em>Caution</em> (approaching the 730-day limit), or <em>Warning</em> (at risk of falling below PR residency requirement).</li>
+                            <li><strong>Start a Trip / Trip in Progress:</strong> A full-width button to log a departure in real time. While a trip is active, this swaps to a <strong>"Trip in Progress"</strong> banner showing destination and elapsed days. Tapping it takes you to the Trips tab.</li>
+                            <li><strong>Citizenship Progress Ring:</strong> Shows your physical presence toward the <strong>1,095-day</strong> requirement. Tap the ring to open the full <strong>Citizenship Record</strong> audit trail.</li>
+                            <li><strong>PR Status Ring:</strong> Shows your residency obligation toward the <strong>730-day</strong> PR requirement. Tap to open the same Citizenship Record screen.</li>
+                            <li><strong>Milestone Card:</strong> Dark card showing your projected citizenship eligibility date and days remaining. Shows "Requirement Met" once you've crossed 1,095 days.</li>
+                            <li><strong>PR Card Expiry Card:</strong> A color-coded card (green / amber / red) that appears when you've set a PR card expiry date in Settings. Tapping it navigates to Settings to update your card details.</li>
+                            <li><strong>Safe Travel Planner (Pro):</strong> A card linking to the Safe Travel Planner. Free users see a "PRO" badge and are directed to the paywall.</li>
+                            <li><strong>Recent Trips:</strong> Your 2 most recent travel entries for quick reference.</li>
+                            <li><strong>Family Profile Switcher (Pro):</strong> When tracking multiple family members, a row of avatar chips appears below the hero card. Tap any chip to switch the active profile — all rings, cards, and milestone update instantly.</li>
+                            <li><strong>Family Summary Strip (Pro):</strong> A horizontal scroll of compact cards showing the citizenship/PR ring status for each family member at a glance.</li>
+                        </ul>
+                    </section>
+
+                    <section id="trips" class="content-card">
+                        <h2><i class="fas fa-plane" style="color: #E67E22;"></i> 4. Managing Your Trips</h2>
+                        <p>Navigate to the <strong>Trips</strong> tab (airplane icon) to view and manage all travel records.</p>
+
+                        <h3>A. Adding a Past Trip</h3>
+                        <ol class="step-list">
+                            <li>Tap the <strong>"+" (Add)</strong> button in the top right.</li>
+                            <li>Enter the <strong>Departure Date</strong> — the day you <em>left</em> Canada.</li>
+                            <li>Enter the <strong>Return Date</strong> — the day you <em>returned</em> to Canada.</li>
+                            <li>Enter the <strong>Destination</strong> (city and country).</li>
+                            <li>Select a <strong>Trip Purpose</strong> (Vacation, Business, Medical, Family Visit, etc.).</li>
+                            <li><em>(Optional)</em> Toggle <strong>Special Conditions</strong> if applicable:
+                                <ul style="margin-top: 0.5rem; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                                    <li><strong>Accompanying Canadian Spouse</strong> — traveling with a Canadian citizen spouse. These days do not count against your PR residency obligation.</li>
+                                    <li><strong>Working for Canadian Business Abroad</strong> — employed by a Canadian company while outside Canada. Same exemption applies.</li>
+                                </ul>
+                            </li>
+                            <li>Tap <strong>"Save"</strong>.</li>
+                        </ol>
+                        <p style="background: #FFF9F9; border-left: 3px solid #C8482D; padding: 0.75rem 1rem; border-radius: 0 0.5rem 0.5rem 0; font-size: 0.9rem;"><strong>Important:</strong> The app counts the departure day <em>and</em> the return day as days in Canada, following IRCC's physical presence calculation rules.</p>
+
+                        <h3>B. Recording an Ongoing Trip (Real-Time)</h3>
+                        <ol class="step-list">
+                            <li>On the <strong>Dashboard</strong>, tap <strong>"Start a Trip"</strong> as you are leaving Canada.</li>
+                            <li>Enter the destination and tap <strong>"Start Trip"</strong>. The Dashboard will now show a <strong>"Trip in Progress"</strong> banner. The Trips tab shows a red card at the top with a live day counter.</li>
+                            <li>When you return to Canada, go to the <strong>Trips</strong> tab and tap <strong>"End Trip"</strong> at the bottom of the active trip card.</li>
+                            <li>Confirm the end date (defaults to today) and tap <strong>"End Trip"</strong>. The completed trip is automatically added to your history and your progress rings update immediately.</li>
+                        </ol>
+
+                        <h3>C. Editing or Deleting a Trip</h3>
+                        <ol class="step-list">
+                            <li>Go to the <strong>Trips</strong> tab.</li>
+                            <li>Tap any trip row to open the editor.</li>
+                            <li>Modify any field and tap <strong>"Update Trip"</strong>, or tap the <strong>Delete</strong> button to remove it.</li>
+                        </ol>
+
+                        <h3>D. Trip List Layout</h3>
+                        <p>Trips are grouped by year with dividers (most recent year at the top). Each row shows: destination, dates and duration, purpose tag, and a special condition badge if applicable.</p>
+                    </section>
+
+                    <section id="eligibility" class="content-card">
+                        <h2><i class="fas fa-check-circle" style="color: #27AE60;"></i> 5. Citizenship Record</h2>
+                        <p>Access this by <strong>tapping either progress ring on the Dashboard</strong>. This screen shows a transparent breakdown of every day counted toward your citizenship and PR calculations.</p>
+
+                        <ul>
+                            <li><strong>Summary hero:</strong> Total days credited (e.g., "812 / 1,095"), your eligibility date, and a status badge.</li>
+                            <li><strong>Three breakdown columns:</strong>
+                                <ul style="margin-top: 0.5rem; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                                    <li><strong style="color: #3D7A52;">Green</strong> — Days in Canada as a PR</li>
+                                    <li><strong style="color: #B8860B;">Amber</strong> — Pre-PR days credited (at 0.5&times;, capped at 365)</li>
+                                    <li><strong style="color: #C8482D;">Red</strong> — Total days abroad (trips counted as absences)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Trip timeline:</strong> Every trip shown in chronological order with its exact absence interval, so you can verify the math.</li>
+                        </ul>
+
+                        <h3>How the Calculations Work</h3>
+                        <p><strong>Citizenship (1,095-day rule):</strong> The app scans every possible rolling 5-year window and finds the one that gives you the highest physical presence count. Once the best window is found, it projects forward to calculate the earliest date you can apply.</p>
+                        <ul>
+                            <li>Days before your PR landing date count as <strong>0.5 days each</strong> (max 365 credited days, equivalent to 730 actual days as a temporary resident).</li>
+                            <li>Departure day and return day both count as <strong>full days in Canada</strong>.</li>
+                        </ul>
+                        <p style="margin-top: 1rem;"><strong>PR Residency (730-day rule):</strong> You must have been physically present in Canada for at least 730 days out of every rolling 5-year period since your PR landing date.</p>
+                        <ul>
+                            <li>Trips marked "Accompanying Canadian Spouse" or "Working for Canadian Business Abroad" do <strong>not</strong> count as absences for PR residency purposes. They still count as absences for <strong>citizenship</strong> purposes.</li>
+                        </ul>
+                    </section>
+
+                    <section id="planner" class="content-card">
+                        <h2><i class="fas fa-calendar-check" style="color: #2980B9;"></i> 6. Safe Travel Planner <span class="pro-badge">Pro</span></h2>
+                        <p>The Safe Travel Planner answers <em>"Can I take this trip?"</em> before you book.</p>
+                        <p><strong>Access:</strong> Tap the <strong>Safe Travel Planner</strong> card on the Dashboard.</p>
+                        <ol class="step-list">
+                            <li>Enter a <strong>Departure Date</strong> and <strong>Return Date</strong> for a planned future trip.</li>
+                            <li>Enter the <strong>Destination</strong>.</li>
+                            <li>The planner instantly shows how many days the trip adds to your absence total, your projected citizenship eligibility date <em>with</em> the trip included, and whether your PR residency status remains safe.</li>
+                        </ol>
+                        <p>You can add <strong>multiple planned trips</strong> and see their cumulative effect. No data is saved until you choose to add a confirmed trip to your actual history.</p>
+                    </section>
+
+                    <section id="autotrack" class="content-card">
+                        <h2><i class="fas fa-location-crosshairs" style="color: #E74C3C;"></i> 7. Auto-Tracking <span class="pro-badge">Pro</span></h2>
+                        <p>Auto-Tracking uses your device's location to detect when you enter and leave Canada automatically — no manual input required.</p>
+
+                        <h3>Setup</h3>
+                        <ol class="step-list">
+                            <li>Go to <strong>Settings &rarr; Auto-Tracking</strong>.</li>
+                            <li>Toggle <strong>"Enable Auto-Tracking"</strong> on.</li>
+                            <li>Ensure iOS location permissions for the app are set to <strong>Always</strong> (iOS will prompt you, or check <strong>iPhone Settings &rarr; Privacy &rarr; Location Services &rarr; Canada Travel Tracker</strong>).</li>
+                        </ol>
+
+                        <h3>How It Works</h3>
+                        <ul>
+                            <li>The app monitors significant location changes in the background. Battery impact is minimal.</li>
+                            <li>When a border crossing is detected, the app logs the event and can notify you to confirm.</li>
+                            <li>GPS coordinates used for detection are <strong>never uploaded or shared</strong>. All processing happens on your device.</li>
+                        </ul>
+
+                        <h3>Limitations</h3>
+                        <ul>
+                            <li>Requires "Always" location permission — "While Using" is not sufficient.</li>
+                            <li>Detection may be delayed by a few minutes near the border depending on GPS signal.</li>
+                            <li>Air travel is supported; ferry and land crossings may occasionally require manual confirmation.</li>
+                        </ul>
+                    </section>
+
+                    <section id="family" class="content-card">
+                        <h2><i class="fas fa-users" style="color: #F1C40F;"></i> 8. Family Profiles <span class="pro-badge">Pro</span></h2>
+                        <p>Track PR status and citizenship progress for your spouse and dependents in one app.</p>
+
+                        <h3>Adding a Family Member</h3>
+                        <ol class="step-list">
+                            <li>Go to <strong>Settings &rarr; Manage Profiles</strong>.</li>
+                            <li>Tap <strong>"Add Profile"</strong>.</li>
+                            <li>Enter their name and PR landing date (and pre-PR arrival date if applicable).</li>
+                            <li>Tap <strong>"Save Profile"</strong>.</li>
+                        </ol>
+
+                        <h3>Switching Between Profiles</h3>
+                        <ul>
+                            <li><strong>From the Dashboard:</strong> Tap any avatar chip in the profile switcher row that appears below the hero card. All rings, cards, and calculations update instantly to that person's data.</li>
+                            <li><strong>From the Trips tab:</strong> The same avatar chips appear at the top of the Trips screen. The page title changes to "[FirstName]'s Trips" so it's always clear whose history is on screen.</li>
+                            <li><strong>From Settings:</strong> Go to <strong>Settings &rarr; Manage Profiles</strong> and tap the person you want to view.</li>
+                        </ul>
+                        <p><strong>Each profile has its own:</strong> trip history, citizenship and PR calculations, and notifications.</p>
+                    </section>
+
+                    <section id="notifications" class="content-card">
+                        <h2><i class="fas fa-bell" style="color: #E67E22;"></i> 9. Notifications &amp; Reminders</h2>
+                        <p>The app can send three types of notifications:</p>
+                        <div class="prose-grid">
+                            <div class="prose-item">
+                                <strong>PR Card Expiry Reminder</strong>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;">Alerts you N months before your PR card expires so you have time to renew.</p>
+                            </div>
+                            <div class="prose-item">
+                                <strong>Citizenship Eligibility Reminder</strong>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;">Alerts you when you reach or approach the 1,095-day requirement.</p>
+                            </div>
+                            <div class="prose-item">
+                                <strong>Ongoing Trip Alert</strong>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;">Reminds you if you have an active ongoing trip that hasn't been ended.</p>
+                            </div>
+                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>To configure:</strong> Go to <strong>Settings &rarr; Notifications</strong>. You can enable or disable each type individually and adjust the lead time for the citizenship eligibility reminder (1 month, 3 months, or 6 months before).</p>
+                        <p>If notifications aren't working, check <strong>iPhone Settings &rarr; Notifications &rarr; Canada Travel Tracker</strong> and ensure alerts are enabled.</p>
+                    </section>
+
+                    <section id="data" class="content-card">
+                        <h2><i class="fas fa-file-export" style="color: #95A5A6;"></i> 10. Data Export</h2>
+
+                        <h3>Exporting to CSV</h3>
+                        <ol class="step-list">
+                            <li>Go to the <strong>Trips</strong> tab.</li>
+                            <li>Tap the <strong>Export</strong> button (square with arrow icon, top right).</li>
+                            <li>Select <strong>"Export as CSV"</strong>.</li>
+                            <li>Use the iOS share sheet to save to Files, email it, or share it directly.</li>
+                        </ol>
+                        <p>The CSV export includes all trips with their dates, destinations, duration, and purpose. It is suitable for use with the IRCC Physical Presence Calculator or sharing with an immigration lawyer.</p>
+                        <p style="background: #FFF9F9; border-left: 3px solid #C8482D; padding: 0.75rem 1rem; border-radius: 0 0.5rem 0.5rem 0; font-size: 0.9rem;"><strong>Note:</strong> The export covers the currently active profile. Switch profiles before exporting if you want another person's trip history.</p>
+                    </section>
+
+                    <section id="settings" class="content-card">
+                        <h2><i class="fas fa-gear" style="color: #7F8C8D;"></i> 11. Settings &amp; Profile Management</h2>
+                        <p>Settings is the third tab (gear icon).</p>
+                        <div class="prose-grid">
+                            <div class="prose-item">
+                                <strong>Profile</strong>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;">Your name, PR landing date, pre-PR arrival date, PR card expiry.</p>
+                            </div>
+                            <div class="prose-item">
+                                <strong>Pro Subscription</strong>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;">Current subscription status, manage subscription, restore purchases.</p>
+                            </div>
+                            <div class="prose-item">
+                                <strong>Auto-Tracking</strong>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;">Enable/disable background border detection.</p>
+                            </div>
+                            <div class="prose-item">
+                                <strong>Notifications</strong>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;">Configure reminders and alerts.</p>
+                            </div>
+                            <div class="prose-item">
+                                <strong>Help &amp; Resources</strong>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;">Replay Tutorial, Privacy Policy, Terms of Service.</p>
+                            </div>
+                            <div class="prose-item">
+                                <strong>Reset App</strong>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;">Wipes all trip data and profiles, returns to onboarding. Cannot be undone. Export your CSV first.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="faq" class="content-card">
+                        <h2><i class="fas fa-question-circle" style="color: var(--primary);"></i> 12. FAQ &amp; Troubleshooting</h2>
+                        <div class="prose-grid">
+                            <div class="prose-item">
+                                <strong>Why is my citizenship day count lower than I expected?</strong>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;">Check that your <strong>PR Landing Date</strong> is correct in Settings &rarr; Profile. If you lived in Canada before your PR (as a student, worker, or visitor), make sure your <strong>Pre-PR Arrival Date</strong> is set. Also verify all trips are logged — a single missing long trip can shift the count significantly.</p>
+                            </div>
+                            <div class="prose-item">
+                                <strong>How are the departure and return days counted?</strong>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;">Following IRCC rules, <strong>both the day you leave and the day you return count as full days in Canada</strong>. Only the days you are actually abroad reduce your count.</p>
+                            </div>
+                            <div class="prose-item">
+                                <strong>What do the Special Conditions toggles do?</strong>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;">For <strong>PR residency</strong> calculations only: trips marked "Accompanying Canadian Spouse" or "Working for Canadian Business Abroad" are treated as if you were in Canada — they don't count against your 730-day obligation. These trips still count as absences for <strong>citizenship</strong> purposes.</p>
+                            </div>
+                            <div class="prose-item">
+                                <strong>Can I use this app for IRCC's official physical presence calculation?</strong>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;">The app implements the same rules IRCC uses. However, <strong>always verify your totals through official IRCC sources</strong> before submitting any application. The app is a planning tool, not a legal document.</p>
+                            </div>
+                            <div class="prose-item">
+                                <strong>Why doesn't Auto-Tracking work even though I enabled it?</strong>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;">Check <strong>iPhone Settings &rarr; Privacy &amp; Security &rarr; Location Services &rarr; Canada Travel Tracker</strong>. It must be set to <strong>Always</strong>, not "While Using". If you recently reinstalled the app, you may need to re-enable the toggle in Settings.</p>
+                            </div>
+                            <div class="prose-item">
+                                <strong>Notifications stopped working. What do I do?</strong>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;">Check <strong>iPhone Settings &rarr; Notifications &rarr; Canada Travel Tracker</strong> and ensure "Allow Notifications" is on. Also check <strong>Settings &rarr; Notifications</strong> inside the app — each reminder type has its own toggle. If you denied notifications during onboarding, re-enable them from iPhone Settings.</p>
+                            </div>
+                            <div class="prose-item">
+                                <strong>I lost or replaced my phone. Can I get my data back?</strong>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;">All data is stored locally on your device and is <strong>not uploaded to any server</strong>. There is no automatic backup or restore. To protect against data loss, regularly use the CSV export feature (Trips tab &rarr; Export) and keep the file in a safe place (iCloud Drive, email, etc.).</p>
+                            </div>
+                            <div class="prose-item">
+                                <strong>The app shows a different eligibility date than IRCC's calculator.</strong>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;">The most common cause is a timezone difference in date entry. The app uses calendar dates, so dates entered should be the local calendar date in Canada at the time of travel. If you entered dates in a different timezone, edit the trip to correct them.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="highlight-box">
+                        <p><strong>Disclaimer:</strong> Canada Travel Tracker is not affiliated with IRCC or the Government of Canada. All calculations are estimates based on current IRCC policy. Always verify through official <a href="https://www.canada.ca"
+                                target="_blank" style="color: var(--primary); font-weight: 700;">IRCC sources</a> before
+                            submitting any immigration application.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container" style="justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="index.html" class="logo" style="font-size: 1rem;">
+                <div class="logo-icon" style="width: 24px; height: 24px;">
+                    <i class="fas fa-map-marker-alt" style="font-size: 0.7rem;"></i>
+                </div>
+                Canada Travel Tracker
+            </a>
+        </div>
+        <div class="container"
+            style="margin-top: 2rem; justify-content: center; flex-direction: column; align-items: center; gap: 0.5rem;">
+            <p style="font-size: 0.8rem; color: var(--text-muted);">© 2026 TechWithKev. Built with Privacy First.</p>
+            <p style="font-size: 0.7rem; color: var(--text-muted); opacity: 0.7; font-style: italic;">Not an official
+                IRCC tool. For tracking and planning purposes only.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

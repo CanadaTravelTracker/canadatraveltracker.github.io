@@ -1,8 +1,14 @@
 :root {
-    --primary: #D52B1E;
-    --primary-light: #FF6B6B;
-    --primary-dark: #A12217;
+    --primary: #C8102E;
+    --primary-light: #E8475F;
+    --primary-dark: #A00E24;
+    --fern: #2E7D32;
+    --fern-light: #E8F5E9;
+    --amber: #F5A623;
+    --amber-light: #FFF8E1;
+    --ash: #8E8E93;
     --bg: #FDFCFB;
+    --surface: #F2F2F7;
     --text: #1A1A1A;
     --text-muted: #636E72;
     --white: #FFFFFF;
@@ -403,8 +409,131 @@ section {
 }
 
 .benefit-item i {
-    color: #27AE60;
+    color: var(--fern);
     font-size: 1.5rem;
+}
+
+/* Download Buttons */
+.download-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.download-btn {
+    height: 60px;
+    padding: 0 2rem;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+.download-btn.primary-btn {
+    background: var(--text);
+    color: white;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.download-btn.primary-btn:hover {
+    background: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn.secondary-btn {
+    background: var(--white);
+    color: var(--text);
+    border: 1.5px solid var(--border);
+}
+
+.download-btn.secondary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.download-btn i {
+    font-size: 1.4rem;
+}
+
+.download-btn-label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
+}
+
+.download-btn-label small {
+    font-size: 0.65rem;
+    font-weight: 600;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.download-btn-label span {
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.trial-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: left;
+}
+
+.trial-note strong {
+    color: var(--fern);
+}
+
+/* Pro badge */
+.pro-badge {
+    font-size: 0.6rem;
+    background: var(--primary);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Feature tags strip */
+.feature-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.feature-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.9rem;
+    background: var(--fern-light);
+    color: var(--fern);
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.feature-tag.amber {
+    background: var(--amber-light);
+    color: #92620A;
+}
+
+.feature-tag.maple {
+    background: rgba(200, 16, 46, 0.08);
+    color: var(--primary);
 }
 
 /* FAQ */

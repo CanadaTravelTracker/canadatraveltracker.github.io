@@ -24,7 +24,7 @@
 
     <header>
         <div class="container">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <div class="logo-icon">
                     <i class="fas fa-map-marker-alt"></i>
                 </div>
@@ -32,6 +32,7 @@
             </a>
             <div class="nav-links">
                 <a href="index.html" class="nav-link">Home</a>
+                <a href="guide.html" class="nav-link">Guide</a>
                 <a href="privacy.html" class="nav-link">Privacy</a>
                 <a href="support.html" class="nav-link">Support</a>
                 <a href="index.html#download" id="nav-cta-button"
@@ -45,24 +46,17 @@
     <section class="hero animate">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-headline">Track Your <br><span class="gradient-text">Journey to Canada.</span></h1>
-                <p class="hero-subheading">Meticulously manage your travel history and physical presence. The definitive
-                    tracker for PRs working toward their 1,095-day goal.</p>
+                <h1 class="hero-headline">Know Exactly When<br><span class="gradient-text">You Can Apply.</span></h1>
+                <p class="hero-subheading">Track your physical presence in Canada with precision. The definitive app for
+                    Permanent Residents working toward their 1,095-day citizenship goal.</p>
 
-                <form class="hero-form" id="hero-form" action="https://formspree.io/f/mgolkllq" method="POST">
-                    <div class="input-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="input-group">
-                        <input type="email" name="email" placeholder="Email Address" required>
-                    </div>
-                    <button type="submit" class="cta-button" id="hero-submit-btn">
-                        Get Early Access <i class="fas fa-arrow-right"></i>
-                    </button>
-                    <div id="hero-status"
-                        style="display: none; font-size: 0.9rem; font-weight: 700; color: #27AE60; margin-top: 1rem;">
-                    </div>
-                </form>
+                <div class="download-buttons">
+                    <a href="https://apps.apple.com/us/app/canadian-travel-tracker/id6758276244"
+                        id="hero-appstore-badge" target="_blank" rel="noopener" style="display: inline-block;">
+                        <img src="assets/images/badge-app-store-black.svg" alt="Download on the App Store" height="54"
+                            style="height: 54px; width: auto;">
+                    </a>
+                </div>
             </div>
             <div class="hero-image">
                 <img src="assets/images/hero_mockup-portrait.png" alt="Canada Travel Tracker Dashboard Mockup">
@@ -103,41 +97,56 @@
             <div class="section-header">
                 <h2 class="section-title">How We Solve This</h2>
             </div>
-            <div class="solve-grid">
+            <div class="solve-grid" style="grid-template-columns: repeat(2, 1fr);">
                 <div class="feature-box">
                     <i class="fas fa-calculator"></i>
                     <h3>Automated Residency</h3>
-                    <p>High-precision tracking of your 1,095-day requirement with real-time updates.</p>
+                    <p>High-precision tracking of your 1,095-day citizenship requirement and 730-day PR obligation,
+                        updated in real time.</p>
                 </div>
                 <div class="feature-box">
                     <i class="fas fa-plane-departure"></i>
-                    <h3>Safe Travel Planner</h3>
-                    <p>Simulate future trips to see their impact on your eligibility before you book.</p>
+                    <div
+                        style="display: flex; align-items: center; justify-content: center; gap: 0.6rem; margin-bottom: 0.5rem;">
+                        <h3 style="margin-bottom: 0;">Safe Travel Planner</h3>
+                        <span class="pro-badge">Pro</span>
+                    </div>
+                    <p>Simulate future trips to see their exact impact on your eligibility before you book anything.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-location-crosshairs"></i>
+                    <div
+                        style="display: flex; align-items: center; justify-content: center; gap: 0.6rem; margin-bottom: 0.5rem;">
+                        <h3 style="margin-bottom: 0;">Auto-Tracking</h3>
+                        <span class="pro-badge">Pro</span>
+                    </div>
+                    <p>Automatically detect when you cross the Canadian border using low-energy geofencing. Zero manual
+                        entry. 100% private — location data never leaves your device.</p>
                 </div>
                 <div class="feature-box">
                     <i class="fas fa-users"></i>
                     <div
                         style="display: flex; align-items: center; justify-content: center; gap: 0.6rem; margin-bottom: 0.5rem;">
                         <h3 style="margin-bottom: 0;">Family Tracking</h3>
-                        <span
-                            style="font-size: 0.6rem; background: var(--primary); color: white; padding: 2px 8px; border-radius: 6px; font-weight: 900; text-transform: uppercase;">Roadmap</span>
+                        <span class="pro-badge">Pro</span>
                     </div>
-                    <p>Upcoming premium feature to manage residency status for your entire family in one centralized
-                        dash.</p>
+                    <p>Track multiple family members in one app. Switch between profiles in one tap, with separate trip
+                        histories and eligibility calculations for each.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <div class="trusted-by">
-        <div class="container">
-            <p>Trusted by over 5,000 users</p>
-            <div class="logo-cloud">
-                <i class="fab fa-apple"></i>
-                <i class="fab fa-google-play"></i>
-                <i class="fab fa-app-store-ios"></i>
-                <i class="fas fa-shield-halved"></i>
-                <i class="fas fa-certificate"></i>
+        <div class="container" style="flex-direction: column; align-items: center;">
+            <p>Available on iOS</p>
+            <div class="feature-tags">
+                <span class="feature-tag"><i class="fas fa-lock"></i> Data stays on-device</span>
+                <span class="feature-tag"><i class="fas fa-calculator"></i> 1,095-day rule</span>
+                <span class="feature-tag amber"><i class="fas fa-id-card"></i> PR Card expiry alerts</span>
+                <span class="feature-tag maple"><i class="fas fa-location-crosshairs"></i> Auto-Tracking</span>
+                <span class="feature-tag"><i class="fas fa-users"></i> Family profiles</span>
+                <span class="feature-tag amber"><i class="fas fa-file-csv"></i> CSV import &amp; export</span>
             </div>
         </div>
     </div>
@@ -194,7 +203,7 @@
                         <div>
                             <strong>PR Residency Compliance</strong>
                             <p style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">Stay within the
-                                730-day requirement effortlessly.</p>
+                                730-day requirement — with surplus day tracking.</p>
                         </div>
                     </li>
                     <li class="benefit-item">
@@ -202,10 +211,148 @@
                         <div>
                             <strong>Pre-PR Credit Calculation</strong>
                             <p style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">Automatically
-                                reclaim time spent as a student or worker.</p>
+                                reclaim time spent as a student or worker (0.5x, capped at 365 days).</p>
+                        </div>
+                    </li>
+                    <li class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>PR Card Expiry Alerts</strong>
+                            <p style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">Color-coded
+                                urgency indicator so you never get caught with an expired PR card.</p>
                         </div>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing bg-white animate" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Simple, Transparent Pricing</h2>
+                <p style="color: var(--text-muted); font-size: 1rem; margin-top: 0.5rem;">Start free. Upgrade when
+                    you're ready.</p>
+            </div>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; max-width: 1100px; margin: 0 auto;">
+                <!-- Free Tier -->
+                <div
+                    style="background: var(--bg); border: 1px solid var(--border); border-radius: 1.5rem; padding: 2rem;">
+                    <p
+                        style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.5rem;">
+                        Free</p>
+                    <p style="font-size: 2.5rem; font-weight: 900; margin-bottom: 0.25rem;">$0</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">Forever free</p>
+                    <ul
+                        style="list-style: none; padding: 0; margin: 0 0 2rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem;"><i
+                                class="fas fa-check" style="color: #3D7A52;"></i> 1,095-day citizenship tracking</li>
+                        <li style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem;"><i
+                                class="fas fa-check" style="color: #3D7A52;"></i> PR residency obligation monitoring
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem;"><i
+                                class="fas fa-check" style="color: #3D7A52;"></i> Pre-PR credit calculation</li>
+                        <li style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem;"><i
+                                class="fas fa-check" style="color: #3D7A52;"></i> PR card expiry alerts</li>
+                        <li style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem;"><i
+                                class="fas fa-check" style="color: #3D7A52;"></i> CSV import &amp; export</li>
+                        <li style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem;"><i
+                                class="fas fa-check" style="color: #3D7A52;"></i> English, Chinese (Simplified &amp;
+                            Traditional)</li>
+                    </ul>
+                    <a href="#download"
+                        style="display: block; text-align: center; padding: 0.85rem; border-radius: 0.75rem; border: 1.5px solid var(--border); font-weight: 700; font-size: 0.95rem; color: var(--text); text-decoration: none;">Download
+                        Free</a>
+                </div>
+                <!-- Monthly Pro -->
+                <div
+                    style="background: var(--bg); border: 1px solid var(--border); border-radius: 1.5rem; padding: 2rem;">
+                    <p
+                        style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.5rem;">
+                        Pro &mdash; Monthly</p>
+                    <p style="font-size: 2.5rem; font-weight: 900; margin-bottom: 0.25rem;">$1.99<span
+                            style="font-size: 1rem; font-weight: 600; color: var(--text-muted);">/mo</span></p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">Cancel any time</p>
+                    <ul
+                        style="list-style: none; padding: 0; margin: 0 0 2rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem;"><i
+                                class="fas fa-check" style="color: #3D7A52;"></i> Everything in Free</li>
+                        <li style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem;"><i
+                                class="fas fa-check" style="color: #3D7A52;"></i> Safe Travel Planner</li>
+                        <li style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem;"><i
+                                class="fas fa-check" style="color: #3D7A52;"></i> Auto-Tracking</li>
+                        <li style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem;"><i
+                                class="fas fa-check" style="color: #3D7A52;"></i> Family Tracking</li>
+                        <li style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem;"><i
+                                class="fas fa-check" style="color: #3D7A52;"></i> Restore purchases across devices</li>
+                    </ul>
+                    <a href="#download"
+                        style="display: block; text-align: center; padding: 0.85rem; border-radius: 0.75rem; border: 1.5px solid var(--border); font-weight: 700; font-size: 0.95rem; color: var(--text); text-decoration: none;">Get
+                        Monthly</a>
+                </div>
+                <!-- Yearly Pro -->
+                <div
+                    style="background: #1A1A2E; border: 2px solid #C8482D; border-radius: 1.5rem; padding: 2rem; position: relative; overflow: hidden;">
+                    <span
+                        style="position: absolute; top: 1.25rem; right: 1.25rem; background: #C8482D; color: white; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.25rem 0.75rem; border-radius: 999px;">Best
+                        Value</span>
+                    <p
+                        style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5); margin-bottom: 0.5rem;">
+                        Pro &mdash; Yearly</p>
+                    <p style="font-size: 2.5rem; font-weight: 900; margin-bottom: 0.1rem; color: white;">$19.99<span
+                            style="font-size: 1rem; font-weight: 600; opacity: 0.7;">/year</span></p>
+                    <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem;">Save 16% vs
+                        monthly</p>
+                    <ul
+                        style="list-style: none; padding: 0; margin: 0 0 2rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li
+                            style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem; color: rgba(255,255,255,0.85);">
+                            <i class="fas fa-check" style="color: #3D7A52;"></i> Everything in Free</li>
+                        <li
+                            style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem; color: rgba(255,255,255,0.85);">
+                            <i class="fas fa-check" style="color: #3D7A52;"></i> Safe Travel Planner</li>
+                        <li
+                            style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem; color: rgba(255,255,255,0.85);">
+                            <i class="fas fa-check" style="color: #3D7A52;"></i> Auto-Tracking (border crossing
+                            detection)</li>
+                        <li
+                            style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem; color: rgba(255,255,255,0.85);">
+                            <i class="fas fa-check" style="color: #3D7A52;"></i> Family Tracking (multiple profiles)
+                        </li>
+                        <li
+                            style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem; color: rgba(255,255,255,0.85);">
+                            <i class="fas fa-check" style="color: #3D7A52;"></i> Dashboard family summary strip</li>
+                        <li
+                            style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem; color: rgba(255,255,255,0.85);">
+                            <i class="fas fa-check" style="color: #3D7A52;"></i> Restore purchases across devices</li>
+                    </ul>
+                    <a href="#download"
+                        style="display: block; text-align: center; padding: 0.85rem; border-radius: 0.75rem; background: #C8482D; color: white; font-weight: 700; font-size: 0.95rem; text-decoration: none;">Get
+                        Yearly</a>
+                </div>
+                <!-- Lifetime Pro -->
+                <div
+                    style="background: var(--bg); border: 1px solid var(--border); border-radius: 1.5rem; padding: 2rem;">
+                    <p
+                        style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.5rem;">
+                        Pro &mdash; Lifetime</p>
+                    <p style="font-size: 2.5rem; font-weight: 900; margin-bottom: 0.25rem;">$84.99</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">One-time payment,
+                        forever access</p>
+                    <ul
+                        style="list-style: none; padding: 0; margin: 0 0 2rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem;"><i
+                                class="fas fa-check" style="color: #3D7A52;"></i> Everything in Pro Yearly</li>
+                        <li style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem;"><i
+                                class="fas fa-check" style="color: #3D7A52;"></i> No recurring subscription</li>
+                        <li style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem;"><i
+                                class="fas fa-check" style="color: #3D7A52;"></i> All future Pro features included</li>
+                    </ul>
+                    <a href="#download"
+                        style="display: block; text-align: center; padding: 0.85rem; border-radius: 0.75rem; border: 1.5px solid var(--border); font-weight: 700; font-size: 0.95rem; color: var(--text); text-decoration: none;">Get
+                        Lifetime Access</a>
+                </div>
             </div>
         </div>
     </section>
@@ -219,16 +366,26 @@
                 <div class="faq-item">
                     <button class="faq-question">Is my data secure? <i class="fas fa-plus"></i></button>
                     <div class="faq-answer">
-                        Yes. All your data is stored locally on your device using SwiftData. We never upload your
-                        personal travel history to our servers.
+                        Yes. All data is stored locally on your device using Core Data with full encryption at rest.
+                        Your travel history, GPS location data, and profile information never leave your device — we
+                        have no servers to upload to.
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">Does it support family tracking? <i class="fas fa-plus"></i></button>
                     <div class="faq-answer">
-                        Family tracking is currently on our product roadmap as a premium feature. We are working on
-                        multi-profile support to allow you to track your entire family's residency status within the
-                        same app.
+                        Yes — Family Tracking is available now as a Pro feature. You can manage separate profiles for
+                        your spouse, children, or parents, each with their own trip history and eligibility
+                        calculations.
+                        Switch between family members in one tap from the Dashboard or Trips tab.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How does Auto-Tracking work? <i class="fas fa-plus"></i></button>
+                    <div class="faq-answer">
+                        Auto-Tracking uses iOS low-energy geofencing to detect when you cross the Canadian border.
+                        When a crossing is detected, the app prompts you to review and save the trip — no manual data
+                        entry required. Your location data never leaves your device.
                     </div>
                 </div>
                 <div class="faq-item">
@@ -242,11 +399,20 @@
         </div>
     </section>
 
-    <section class="final-cta">
+    <section class="final-cta" id="download">
         <div class="container">
-            <h2 class="section-title" style="color: white; margin-bottom: 2rem;">Ready to Get Started?</h2>
-            <a href="#" class="cta-button">Download on App Store <i class="fab fa-apple"></i></a>
-            <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.8;">No commitment, cancel anytime.</p>
+            <h2 class="section-title" style="color: white; margin-bottom: 1rem;">Know When You Can Apply.</h2>
+            <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; margin-bottom: 2.5rem;">Start free. Upgrade to
+                Pro any time — monthly, yearly, or lifetime.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://apps.apple.com/us/app/canadian-travel-tracker/id6758276244" id="cta-appstore-badge"
+                    target="_blank" rel="noopener" style="display: inline-block;">
+                    <img src="assets/images/badge-app-store-white.svg" alt="Download on the App Store" height="54"
+                        style="height: 54px; width: auto;">
+                </a>
+            </div>
+            <p style="margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.7;">Subscriptions managed through your Apple
+                ID. Cancel any time.</p>
         </div>
     </section>
 
@@ -282,44 +448,6 @@
                 }
             });
         });
-
-        // Hero Form Submission
-        const heroForm = document.getElementById("hero-form");
-        const heroStatus = document.getElementById("hero-status");
-        const heroBtn = document.getElementById("hero-submit-btn");
-
-        async function handleHeroSubmit(event) {
-            event.preventDefault();
-            heroBtn.disabled = true;
-            heroBtn.innerHTML = 'Sending... <i class="fas fa-circle-notch fa-spin"></i>';
-
-            const data = new FormData(event.target);
-            fetch(event.target.action, {
-                method: heroForm.method,
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    heroStatus.innerHTML = "Success! We'll keep you updated.";
-                    heroStatus.style.display = "block";
-                    heroForm.reset();
-                    heroBtn.style.display = "none";
-                } else {
-                    heroStatus.innerHTML = "Oops! Something went wrong.";
-                    heroStatus.style.color = "#D52B1E";
-                    heroStatus.style.display = "block";
-                    heroBtn.disabled = false;
-                    heroBtn.innerHTML = 'Get Early Access <i class="fas fa-arrow-right"></i>';
-                }
-            }).catch(error => {
-                heroStatus.innerHTML = "Oops! Something went wrong.";
-                heroStatus.style.color = "#D52B1E";
-                heroStatus.style.display = "block";
-                heroBtn.disabled = false;
-                heroBtn.innerHTML = 'Get Early Access <i class="fas fa-arrow-right"></i>';
-            });
-        }
-        if (heroForm) heroForm.addEventListener("submit", handleHeroSubmit);
     </script>
 </body>
 
