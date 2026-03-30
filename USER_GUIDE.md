@@ -1,6 +1,6 @@
-# Canada Travel Tracker: User Manual
+# Canadian Travel Tracker: User Manual
 
-Welcome to **Canada Travel Tracker**. This manual provides detailed, step-by-step instructions to help you navigate the app and accurately track your path to Canadian Citizenship and Permanent Residency.
+Welcome to **Canadian Travel Tracker**. This manual provides detailed, step-by-step instructions to help you navigate the app and accurately track your path to Canadian Citizenship and Permanent Residency.
 
 ---
 
@@ -147,4 +147,4 @@ Keep your records safe or move them to another device.
 
 ---
 
-*Disclaimer: Canada Travel Tracker provides estimates based on current IRCC policies. Calculations should be verified against official [IRCC sources](https://www.canada.ca) before submitting any legal applications.*
+*Disclaimer: Canadian Travel Tracker provides estimates based on current IRCC policies. Calculations should be verified against official [IRCC sources](https://www.canada.ca) before submitting any legal applications.*
